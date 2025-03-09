@@ -1,0 +1,611 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'spartan',sans-serif;
+}
+body{
+    height: 400vh;
+}
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 80px;
+    /* background: #E3E6F3; خلفيه ناف بار */ 
+    box-shadow: 0  5px 15px rgba(0,0,0,0.06);
+    border-bottom: 1px solid rgb(143, 141, 141);   
+}
+#navbar{
+    display: flex;
+    justify-items: center;
+    align-items: center;       
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px; 
+    position: relative;  
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    transition: 0.2s ease;   
+}
+.logo{
+    width: 100px;
+}
+.logo img{
+    width: 100%;
+}
+#navbar li a:hover{
+    color: #088178;
+}
+#navbar li a:hover,
+#navbar li a.active2{
+    color: #088178;
+}
+#navbar li a.active2::after,
+#navbar li a:hover::after{
+    content: "";
+    height: 2px;
+    width: 30%;
+    background-color: #088178 ;
+    bottom: -4px;
+    left: 20px;
+    position: absolute;
+}
+.sign {
+    display: flex;
+    align-items: center;
+}
+.fa-solids {
+  display: flex;
+  align-items: center;
+}
+.fa-solids i{
+  margin-left: 7px;
+}
+.sign i {
+    margin-left: 7px;
+}
+
+
+/* العروض الشهريه */
+.offers{
+    position:relative;
+    width: 12%;
+    top: 90px;
+    left: 33px;
+}
+.offers h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+    font-weight: 400;
+}
+/*  العروض الشهريه  الهواي*/
+
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    /* flex-wrap: wrap; */
+    position: relative;
+    top: 100px;
+}
+/* لتبديل الصور هوفر */
+/* allLaptops */
+#product1{
+    text-align: center;
+}
+.lap1 img:hover {
+    content: url(micro.png);
+}
+.lap2 img:hover {
+    content: url(lap111.png);
+}
+.lap3 img:hover {
+    content: url(lap222.png);
+}
+.lap4 img:hover {
+    content: url(lap444.png);
+}
+.lap5 img:hover {
+    content: url(lap666.png);
+}
+
+#product1 .pro{
+    width: 23%;
+    padding: 10px 12px;
+    border: 1px solid rgb(232, 230, 230);
+    /* border-radius: 10px; */
+    position: relative;
+    background-color:rgba(232, 230, 230, 0.752) ;
+    margin: 10px;
+}
+#product1 .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+#product1 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+#product1 .pro .des span{
+    color: #171718;
+    font-size: 15px;
+}
+#product1 .pro .des h5{
+    padding-top: 7px;
+    color: #0000009c;
+    font-size: 14px;
+    line-height: 2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#product1 .pro .des h4{
+    padding-top: 18px;
+    font-size: 17px;
+    font-weight: 700;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+  
+}
+/* الشاشات */
+.offersmon{
+    position:relative;
+    left: 33px;
+    width: 12%;
+    position: relative;
+    top: 150px;
+}
+.offersmon h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+    font-weight: 430;
+}  
+
+.mon1 img:hover {
+    content: url(mon11.png);
+}
+.mon2 img:hover {
+    content: url(mon22.png);
+}
+.mon3 img:hover {
+    content: url(mon33.png);
+}
+.mon4 img:hover {
+    content: url(mon44.png);
+}
+.mon5 img:hover {
+    content: url(mon55.png);
+}
+#product2 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    /* flex-wrap: wrap; */
+    position: relative;
+    top: 160px;
+}
+#product2{
+    text-align: center;
+}
+#product2 .pro{
+    width: 23%;
+    padding: 10px 12px;
+    border: 1px solid rgb(232, 230, 230);
+/* border-radius: 10px; */
+    position: relative;
+    background-color:rgba(232, 230, 230, 0.752) ;
+    margin: 10px;
+}
+#product2 .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+#product2 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+#product2 .pro .des span{
+    color: #171718;
+    font-size: 15px;
+}
+#product2 .pro .des h5{
+    padding-top: 7px;
+    color: #0000009c;
+    font-size: 14px;
+    line-height: 2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#product2 .pro .des h4{
+    padding-top: 18px;
+    font-size: 17px;
+    font-weight: 700;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+}
+.GamingLaptops{
+    position:relative;
+    width: 12%;
+    top: 210px;
+    left: 33px;
+}
+.GamingLaptops h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+    font-weight: 400;
+}
+
+.Gaming1 img:hover {
+    content: url(Gaming11.png);
+}
+.Gaming2 img:hover {
+    content: url(Gaming22.png);
+}
+.Gaming3 img:hover {
+    content: url(Gaming33.png);
+}
+.Gaming4 img:hover {
+    content: url(Gaming44.png);
+}
+.Gaming5 img:hover {
+    content: url(Gaming55.png);
+}
+/* GamingLaptops */
+#product3 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    /* flex-wrap: wrap; */
+    position: relative;
+    top: 220px;
+}
+#product3{
+    text-align: center;
+}
+#product3 .pro{
+    width: 23%;
+    padding: 10px 12px;
+    border: 1px solid rgb(232, 230, 230);
+/* border-radius: 10px; */
+    position: relative;
+    background-color:rgba(232, 230, 230, 0.752) ;
+    margin: 10px;
+}
+#product3 .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+#product3 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+#product3 .pro .des span{
+    color: #171718;
+    font-size: 15px;
+}
+#product3 .pro .des h5{
+    padding-top: 7px;
+    color: #0000009c;
+    font-size: 14px;
+    line-height: 2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#product3 .pro .des h4{
+    padding-top: 18px;
+    font-size: 17px;
+    font-weight: 700;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* Laptop Bags */
+.LaptopBags{
+    position:relative;
+    width: 12%;
+    top: 270px;
+    left: 33px;
+}
+.LaptopBags h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+    font-weight: 400;
+}
+#product4 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    /* flex-wrap: wrap; */
+    position: relative;
+    top: 280px;
+}
+#product4{
+    text-align: center;
+}
+#product4 .pro{
+    width: 23%;
+    padding: 10px 12px;
+    border: 1px solid rgb(232, 230, 230);
+/* border-radius: 10px; */
+    position: relative;
+    background-color:rgba(232, 230, 230, 0.752) ;
+    margin: 10px;
+}
+#product4 .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+#product4 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+#product4 .pro .des span{
+    color: #171718;
+    font-size: 15px;
+}
+#product4 .pro .des h5{
+    padding-top: 7px;
+    color: #0000009c;
+    font-size: 14px;
+    line-height: 2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#product4 .pro .des h4{
+    padding-top: 18px;
+    font-size: 17px;
+    font-weight: 700;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+}
+.bag1 img:hover {
+    content: url(bag11.png);
+}
+.bag2 img:hover {
+    content: url(bag22.png);
+}
+.bag3 img:hover {
+    content: url(bag33.png);
+}
+.bag4 img:hover {
+    content: url(bag44.png);
+}
+.bag5 img:hover {
+    content: url(bag55.png);
+}
+/* Computer Memory RAM */
+.ComputerMemoryRAM{
+    position:relative;
+    width: 18%;
+    top: 330px;
+    left: 33px;
+}
+.ComputerMemoryRAM h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+    font-weight: 400;
+}
+
+#product5 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    /* flex-wrap: wrap; */
+    position: relative;
+    top: 340px;
+}
+#product5{
+    text-align: center;
+}
+#product5 .pro{
+    width: 23%;
+    padding: 10px 12px;
+    border: 1px solid rgb(232, 230, 230);
+/* border-radius: 10px; */
+    position: relative;
+    background-color:rgba(232, 230, 230, 0.752) ;
+    margin: 10px;
+}
+#product5 .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+#product5 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+#product5 .pro .des span{
+    color: #171718;
+    font-size: 15px;
+}
+#product5 .pro .des h5{
+    padding-top: 7px;
+    color: #0000009c;
+    font-size: 14px;
+    line-height: 2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#product5 .pro .des h4{
+    padding-top: 18px;
+    font-size: 17px;
+    font-weight: 700;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+}
+.ram1 img:hover {
+    content: url(ram11.png);
+}
+.ram2 img:hover {
+    content: url(ram22.png);
+}
+.ram3 img:hover {
+    content: url(ram33.png);
+}
+.ram4 img:hover {
+    content: url(ram44.png);
+}
+/* Hards */
+.Hards{
+    position:relative;
+    width: 18%;
+    top: 390px;
+    left: 33px;
+}
+.Hards h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+    font-weight: 400;
+}
+#product6 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    /* flex-wrap: wrap; */
+    position: relative;
+    top: 400px;
+}
+#product6{
+    text-align: center;
+}
+#product6 .pro{
+    width: 23%;
+    padding: 10px 12px;
+    border: 1px solid rgb(232, 230, 230);
+/* border-radius: 10px; */
+    position: relative;
+    background-color:rgba(232, 230, 230, 0.752) ;
+    margin: 10px;
+}
+#product6 .pro img{
+    width: 80%;
+    border-radius: 20px;
+}
+#product6 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+#product6 .pro .des span{
+    color: #171718;
+    font-size: 15px;
+}
+#product6 .pro .des h5{
+    padding-top: 7px;
+    color: #0000009c;
+    font-size: 14px;
+    line-height: 2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#product6 .pro .des h4{
+    padding-top: 18px;
+    font-size: 17px;
+    font-weight: 700;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+}
+.hard1 img:hover {
+    content: url(hard11.png);
+}
+.hard2 img:hover {
+    content: url(hard22.png);
+}
+.hard3 img:hover {
+    content: url(hard33.png);
+}
+.hard4 img:hover {
+    content: url(hard44.png);
+}
+.hard5 img:hover {
+    content: url(hard55.png);
+}
+.play{
+    position:relative;
+    width: 18%;
+    top: 450px;
+    left: 33px;
+}
+.play h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+    font-weight: 400;
+}
+
+#product7 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    /* flex-wrap: wrap; */
+    position: relative;
+    top: 460px;
+}
+#product7{
+    text-align: center;
+}
+#product7 .pro{
+    width: 23%;
+    padding: 10px 12px;
+    border: 1px solid rgb(232, 230, 230);
+/* border-radius: 10px; */
+    position: relative;
+    background-color:rgba(232, 230, 230, 0.752) ;
+    margin: 10px;
+}
+#product7 .pro img{
+    width: 80%;
+    border-radius: 20px;
+}
+#product7 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+#product7 .pro .des span{
+    color: #171718;
+    font-size: 15px;
+}
+#product7 .pro .des h5{
+    padding-top: 7px;
+    color: #0000009c;
+    font-size: 14px;
+    line-height: 2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#product7 .pro .des h4{
+    padding-top: 18px;
+    font-size: 17px;
+    font-weight: 700;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+}
+.play1 img:hover {
+    content: url(Play11.png);
+}
+.play2 img:hover {
+    content: url(Play44.png);
+}
+.xbox img:hover {
+    content: url(xboxx.png);
+}
+.xboxs img:hover {
+    content: url(xboxss.png);
+}
+.xboxoo img:hover {
+    content: url(xboxoo.png);
+}
+/* الدائره الي تصعد ليفوك */
+.upp {
+    width: 60px;
+    height: 60px;
+    background-color: #088179be;
+    border-radius: 50%;
+    position: fixed;
+    bottom: -60px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .upp.show {
+    transform: translateY(-120%);
+  }
+  
+  .upp a {
+    text-decoration: none;
+    color: #fff;
+  }
+

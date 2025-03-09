@@ -1,0 +1,911 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'spartan',sans-serif;
+}
+body{
+    height: 500vh;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 80px;
+
+    /* background: #E3E6F3; خلفيه ناف بار */ 
+    box-shadow: 0  5px 15px rgba(0,0,0,0.06);
+    border-bottom: 1px solid rgb(143, 141, 141);
+    
+}
+
+#navbar{
+    display: flex;
+    justify-items: center;
+    align-items: center;  
+      
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px; 
+    position: relative;  
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    transition: 0.2s ease;
+    
+}
+.logo{
+    width: 100px;
+}
+.logo img{
+    width: 100%;
+}
+#navbar li a:hover{
+    color: #088178;
+}
+#navbar li a:hover,
+#navbar li a.active1{
+    color: #088178;
+}
+#navbar li a.active1::after,
+#navbar li a:hover::after{
+    content: "";
+    height: 2px;
+    width: 30%;
+    background-color: #088178 ;
+    bottom: -4px;
+    left: 20px;
+    position: absolute;
+}
+.sign {
+    display: flex;
+    align-items: center;
+}
+.fa-solids {
+  display: flex;
+  align-items: center;
+}
+.fa-solids i{
+  margin-left: 7px;
+}
+
+
+.sign i {
+    margin-left: 7px;
+}
+
+.lap{
+    width: 100%;
+
+}
+
+.slider-container {
+  /* margin: 10px auto; البعد بين ناف بار والصور */
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+.slider-container img {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 1;
+}
+.slider-container img.active {
+  opacity: 1;
+}
+.slider-container .slide-number {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  color: #FFF;
+  padding: 5px 10px;
+  font-size: 0px;
+  /* z-index: 2;لاضهار رقم الصوره */
+  border-radius: 6px;
+}
+.slider-controls {
+  width: 300px; /* عرض الاسهم لي تبدل الصور*/
+  margin: 230px auto;/* بعد بين الاسهم والصور*/
+  overflow: hidden;
+}
+.slider-controls .prev,
+.slider-controls .next {
+  background-color: #009688;
+  color: #FFF;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 20px;/* حواف الاسهم لي تبدل الصور */
+  padding: 5px;
+  user-select: none;
+  width: 20%;
+}
+.slider-controls .prev {
+  float: left;
+}
+.slider-controls .next {
+  float: right;
+}
+.slider-controls .prev.disabled,
+.slider-controls .next.disabled {
+  background-color: rgba(0, 150, 136, 0.5);
+  cursor: no-drop;
+}
+.slider-controls .indicators {
+  width: 60%;
+  float: left;
+}
+.slider-controls .indicators ul {
+  list-style: none;
+  margin: 0;
+  text-align: center;
+}
+.slider-controls .indicators ul li {
+  display: inline-block;
+  background-color: #e3e1e1;
+  color: #333;
+  font-weight: bold;
+  height: 28px;
+  width: 28px;
+  border-radius: 10px;/* حواف الاسهم لي تبدل الصور */
+  margin: 0 2px;
+  line-height: 28px;
+  cursor: pointer;
+}
+.slider-controls .indicators ul li.active {
+  background-color: #009688;
+  color: #FFF;
+}
+
+/* سكشن 4 الصور الزغار */
+.section-p1{
+  width: 200vh;
+  
+}
+.fe-box{
+    position: relative;
+    left: 3%;
+    bottom: 180px;
+    width: 20%;
+}
+.fe-box h1{
+  position: relative;
+  top: 50px;
+  font-family: Calibri, sans-serif;
+  font-size: 35px;
+}
+.fe-box h6{
+  position: relative;
+  top: 70px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 100;
+  line-height: 1.5;
+}
+.fe-box img{
+  width: 290px;
+  border: 1px solid #b9bdbdd0;
+  transition: transform 0.3s ease-in; 
+}
+/*hover imge */
+
+/* .fe-box img:hover {
+  transform: scale(1.1);
+} */
+
+#feature{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+/*show more link*/
+.fe-box a {
+  position: relative;
+  top: 85px;
+  text-decoration: none;
+  color: blue;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+}
+.fe-box a:hover {
+  text-decoration: underline;
+}
+
+.fe-box a i {
+  transition: transform 0.3s ease-in-out;
+}
+
+.fe-box a:hover i {
+  transform: translateX(5px);
+}
+
+/* العناصر تحت الصور الاربعه */
+.elment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 99px;
+  margin-right: 90px;
+
+}
+.elment1 img {
+/*  width and height */
+  width: 70px;
+}
+.elment1 h5{
+  color: rgb(101, 101, 182);
+  font-family:Arial, Helvetica, sans-serif;
+  position: relative;
+  top: 30px;
+  right: 30px;
+}
+.Asus{
+  position: relative;
+  top: 10px;
+}
+.Asush{
+  position: relative;
+  top: 10px;
+}
+.lenovo{
+  position: relative;
+  top: 17px;
+}
+.Apple{
+  position: relative;
+  bottom: 15px;
+}
+.intel h5{
+  position: relative;
+  top: 25px;
+}
+.inteli img{
+  position: relative;
+  left: 18px;
+}
+.lenovoi img{
+  position: relative;
+  left: 15px;
+}
+.xbox h5{
+  position: relative;
+  top: 19px;
+}
+.xboxi img{
+  position: relative;
+  left: 10px;
+}
+.PlayStation h5{
+  position: relative;
+  top: 25px;
+}
+.PlayStation img{
+  left: 15px;
+}
+/* انتقال النص اسفل الصور عند التاشير */
+.elment .elment1 h5 {
+  transition: color 0.2s ease-in-out;
+}
+.elment .elment1:hover h5 {
+  color: rgb(103, 96, 96);
+}
+/* صوره الاعلان تحت البراندات */
+.advs {
+  position: relative;
+}
+.advs .adv img {
+  width: 90%;
+  position: relative;
+  top: 100px;
+  left: 70px;
+  z-index: 0;
+}
+/* العروض الشهريه */
+.offers{
+  position:relative;
+  top: 200px;
+  left: 72px;
+  width: 12%;
+  position: relative;
+  top: 300px;
+}
+.offers h1{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+  font-weight: 400;
+}
+.discountl{
+  background-color: rgb(246, 73, 73);
+  width: 60px;
+  height: 17px;
+  position: relative;
+  bottom: 380px;
+  right: 12.5px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.discountl h1{
+  font-weight: 500;
+  color: white;
+  font-size: 13.5px;
+  position: relative;
+  left: 9px;
+  bottom: 2px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.discountl2{
+  background-color: rgb(246, 73, 73);
+  width: 60px;
+  height: 17px;
+  position: relative;
+  bottom: 437px;
+  right: 12.5px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.discountl2 h1{
+  font-weight: 500;
+  color: white;
+  font-size: 13.5px;
+  position: relative;
+  left: 9px;
+  bottom: 2px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.discountl3{
+  background-color: rgb(246, 73, 73);
+  width: 60px;
+  height: 17px;
+  position: relative;
+  bottom: 437px;
+  right: 12.5px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.discountl3 h1{
+  font-weight: 500;
+  color: white;
+  font-size: 13.5px;
+  position: relative;
+  left: 9px;
+  bottom: 2px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.discountl4{
+  background-color: rgb(246, 73, 73);
+  width: 60px;
+  height: 17px;
+  position: relative;
+  bottom: 410px;
+  right: 12.5px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.discountl4 h1{
+  font-weight: 500;
+  color: white;
+  font-size: 13.5px;
+  position: relative;
+  left: 9px;
+  bottom: 2px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.price {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+  font-weight: 500;
+  text-decoration: line-through;
+  font-size: 15px;
+  position: relative;
+  left: 120px;
+  bottom: 20px;
+}
+.price1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+  font-weight: 500;
+  text-decoration: line-through;
+  font-size: 15px;
+  position: relative;
+  left: 120px;
+  bottom: 20px;
+}
+.price2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+  font-weight: 500;
+  text-decoration: line-through;
+  font-size: 15px;
+  position: relative;
+  left: 120px;
+  bottom: 20px;
+}
+
+
+/*  العروض الشهريه  الهواي*/
+
+#product1 .pro-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  /* flex-wrap: wrap; */
+  position: relative;
+  top: 300px;
+  left: 40px;
+}
+#product1{
+  text-align: center;
+}
+#product1 .pro{
+  width: 23%;
+  padding: 10px 12px;
+  border: 1px solid rgb(232, 230, 230);
+  /* border-radius: 10px; */
+  position: relative;
+  background-color:rgba(232, 230, 230, 0.752) ;
+  margin: 10px;
+}
+#product1 .pro img{
+  width: 100%;
+  border-radius: 20px;
+}
+#product1 .pro .des{
+  text-align: start;
+  padding: 10px 0;
+}
+#product1 .pro .des span{
+  color: #171718;
+  font-size: 15px;
+
+}
+#product1 .pro .des h5{
+  padding-top: 7px;
+  color: #0000009c;
+  font-size: 14px;
+  line-height: 2;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#product1 .pro .des h4{
+  padding-top: 18px;
+  font-size: 15px;
+  font-weight: 700;
+  color: red;
+
+}
+
+/* الشاشات */
+
+
+.offersmon{
+  position:relative;
+  left: 72px;
+  width: 12%;
+  position: relative;
+  top: 400px;
+}
+.offersmon h1{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+  font-weight: 430;
+}
+.pricem5 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+  font-weight: 500;
+  text-decoration: line-through;
+  font-size: 15px;
+  position: relative;
+  left: 120px;
+  bottom: 20px;
+}
+.pricem1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+  font-weight: 500;
+  text-decoration: line-through;
+  font-size: 15px;
+  position: relative;
+  left: 120px;
+  bottom: 20px;
+}
+.pricem2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+  font-weight: 500;
+  text-decoration: line-through;
+  font-size: 15px;
+  position: relative;
+  left: 120px;
+  bottom: 20px;
+}
+.pricem3 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+  font-weight: 500;
+  text-decoration: line-through;
+  font-size: 15px;
+  position: relative;
+  left: 120px;
+  bottom: 20px;
+}
+.pricem4 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+  font-weight: 500;
+  text-decoration: line-through;
+  font-size: 15px;
+  position: relative;
+  left: 120px;
+  bottom: 20px;
+}
+.discount{
+  background-color: rgb(246, 73, 73);
+  width: 60px;
+  height: 17px;
+  position: relative;
+  bottom: 380px;
+  right: 12.5px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.discount h1{
+  font-weight: 500;
+  color: white;
+  font-size: 13.5px;
+  position: relative;
+  left: 9px;
+  bottom: 2px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.discount2{
+  background-color: rgb(246, 73, 73);
+  width: 60px;
+  height: 17px;
+  position: relative;
+  bottom: 408px;
+  right: 12.5px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.discount2 h1{
+  font-weight: 500;
+  color: white;
+  font-size: 13.5px;
+  position: relative;
+  left: 9px;
+  bottom: 2px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.discount3{
+  background-color: rgb(246, 73, 73);
+  width: 60px;
+  height: 17px;
+  position: relative;
+  bottom: 435px;
+  right: 12.5px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.discount3 h1{
+  font-weight: 500;
+  color: white;
+  font-size: 13.5px;
+  position: relative;
+  left: 9px;
+  bottom: 2px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.discount4{
+  background-color: rgb(246, 73, 73);
+  width: 60px;
+  height: 17px;
+  position: relative;
+  bottom: 410px;
+  right: 12.5px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.discount4 h1{
+  font-weight: 500;
+  color: white;
+  font-size: 13.5px;
+  position: relative;
+  left: 9px;
+  bottom: 2px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#product2 .pro-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  /* flex-wrap: wrap; */
+  position: relative;
+  top: 400px;
+  left: 40px;
+}
+#product2{
+  text-align: center;
+}
+#product2 .pro{
+  width: 23%;
+  padding: 10px 12px;
+  border: 1px solid rgb(232, 230, 230);
+  /* border-radius: 10px; */
+  position: relative;
+  background-color:rgba(232, 230, 230, 0.752) ;
+  margin: 10px;
+}
+#product2 .pro img{
+  width: 100%;
+  border-radius: 20px;
+}
+#product2 .pro .des{
+  text-align: start;
+  padding: 10px 0;
+}
+#product2 .pro .des span{
+  color: #171718;
+  font-size: 15px;
+
+}
+#product2 .pro .des h5{
+  padding-top: 7px;
+  color: #0000009c;
+  font-size: 14px;
+  line-height: 2;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#product2 .pro .des h4{
+  padding-top: 18px;
+  font-size: 15px;
+  font-weight: 700;
+  color: red;
+}
+
+/* اقسام الكليه والجامعه  */
+.section-p3{
+  position: relative;
+  top: 690px;
+  width: 200vh;
+  right: 10px;
+}
+.text{
+  position:relative;
+  left: 72px;
+  width: 12%;
+  position: relative;
+  top: 480px;
+}
+.text h1{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+  font-weight: 430;
+}
+
+.fe-boxs{
+  position: relative;
+  left: 3%;
+  bottom: 180px;
+  width: 20%;
+  
+}
+.fe-boxs h1{
+position: relative;
+top: 50px;
+font-family: Calibri, sans-serif;
+font-size: 35px;
+}
+.fe-boxs h6{
+position: relative;
+top: 70px;
+font-size: 15px;
+color: rgba(0, 0, 0, 0.7);
+font-weight: 100;
+line-height: 1.5;
+}
+.fe-boxs img{
+width: 250px;
+border: 1px solid #b9bdbda0; 
+}
+
+#features{
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+/*show more link*/
+.fe-boxs a {
+position: relative;
+top: 85px;
+text-decoration: none;
+color: blue;
+font-family: Georgia, Times, 'Times New Roman', serif;
+}
+.fe-boxs a:hover {
+text-decoration: underline;
+}
+
+.fe-boxs a i {
+transition: transform 0.3s ease-in-out;
+}
+
+.fe-boxs a:hover i {
+transform: translateX(5px);
+}
+
+
+/* النهايه  */
+
+.end{
+  background-color: rgba(128, 128, 128, 0.111);
+  height: 500px;
+  width: 100%;
+  position: relative;
+  top: 750px;
+}
+#end{
+  width: 100%;
+}
+.endimge{
+  position: relative;
+  top: 70px;
+  left: 70px;
+  width: 50%;
+}
+.endimge img{
+  width: 60px;
+}
+.endimge h4{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+  font-weight: 490;
+  color: rgba(0, 0, 0, 0.707);
+}
+.endimge h6{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+  color: rgba(0, 0, 0, 0.707);
+  font-size: 15px;
+  padding-top: 20px;
+  font-weight: 490;
+}
+.powerd{
+  position: relative;
+  left: 70px;
+  bottom: 95px;
+  width: 8%;
+}
+.powerd span{
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.755);
+}
+.section{
+  position: relative;
+  width: 200px;
+  bottom: 70px;
+  left: 1000px;
+}
+.section a{
+  text-decoration: none;
+}
+.section h1{
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.885);
+  padding-bottom: 20px;
+}
+.section ul {
+  list-style-type: none;
+  padding-bottom: 20px;
+}
+.section ul li{
+  padding-bottom: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+  font-weight: 430;
+  color: rgba(0, 0, 0, 0.707);
+}
+.section a ul li{
+  transition: color 0.3s ease;
+}
+.section li:hover  {
+  color: black;
+  font-weight: 450;
+  text-decoration: underline;
+}
+
+
+.lan{
+  display: flex;
+  position: relative;
+  left: 220px;
+  bottom: 65px;
+  width: 50%;
+}
+.lan h4{
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.755);
+}
+.lan i{
+  padding-right: 10px;
+  color: rgba(0, 0, 0, 0.755);
+  position: relative;
+  top:3px;
+  
+
+}
+ .icon{
+  position: relative;
+  left: 70px;
+}
+.icon a i{
+  position: relative;
+  margin-right: 20px;
+  color: rgba(0, 0, 0, 0.512);
+  font-size: 19px;
+  border-radius: 20px;
+}
+ .icon .fa i {
+  transition: color 1s ease, opacity 2s; /* تأثير الانتقال السلس للحالة العادية */
+}
+ .icon .fa i:hover {
+  color: rgb(70, 70, 210);
+  transition: color 0.1s ease;
+}
+
+ .icon .ins i {
+  transition: color 1s ease, opacity 2s; /* تأثير الانتقال السلس للحالة العادية */
+}
+ .icon .ins i:hover {
+  color: rgb(255, 0, 157);
+  transition: color 0.1s ease;
+}
+
+.icon .tel i {
+  transition: color 1s ease, opacity 2s; /* تأثير الانتقال السلس للحالة العادية */
+}
+.icon .tel i:hover {
+  color: blue;
+  transition: color 0.1s ease;
+}
+.icon .pin i {
+  transition: color 1s ease, opacity 2s; /* تأثير الانتقال السلس للحالة العادية */
+}
+.icon .pin i:hover {
+  color: rgb(239, 102, 29);
+  transition: color 0.1s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* الدائره الي تصعد ليفوك */
+.upp {
+  width: 60px;
+  height: 60px;
+  background-color: #088179be;
+  border-radius: 50%;
+  position: fixed;
+  bottom: -60px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.upp.show {
+  transform: translateY(-120%);
+}
+
+.upp a {
+  text-decoration: none;
+  color: #fff;
+}
+

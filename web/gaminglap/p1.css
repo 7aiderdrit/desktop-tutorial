@@ -1,0 +1,375 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'spartan',sans-serif;
+}
+body{
+    height: 100vh;
+    background-color:rgba(232, 230, 230, 0.752) ;
+}
+#header{
+    position: fixed; 
+    top: 0;
+    /* ليفوك  جعل الناف بار ثابت */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 80px;
+    /* background: #E3E6F3; خلفيه ناف بار */ 
+    background-color: white;
+    box-shadow: 0  5px 15px rgba(0,0,0,0.06);
+    border-bottom: 1px solid rgb(143, 141, 141);   
+}
+#navbar{
+    display: flex;
+    justify-items: center;
+    align-items: center;       
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px; 
+    position: relative;  
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    transition: 0.2s ease;   
+}
+.logo{
+    width: 100px;
+}
+.logo img{
+    width: 100%;
+}
+#navbar li a:hover{
+    color: #088178;
+}
+#navbar li a:hover,
+#navbar li a.active2{
+    color: #088178;
+}
+#navbar li a.active2::after,
+#navbar li a:hover::after{
+    content: "";
+    height: 2px;
+    width: 30%;
+    background-color: #088178 ;
+    bottom: -4px;
+    left: 20px;
+    position: absolute;
+}
+.sign {
+    display: flex;
+    align-items: center;
+}
+.fa-solids {
+  display: flex;
+  align-items: center;
+}
+.fa-solids i{
+  margin-left: 7px;
+}
+.sign i {
+    margin-left: 7px;
+}
+
+.derction{
+    display: flex;
+    align-items: center;
+    justify-content: startc;
+    position: relative;
+    top: 100px;
+    left: 92px;
+    width: 40%;
+}
+.derction a{
+    text-decoration: none;
+}
+.derction a h3,h3{
+    font-size: 15px;
+    margin-right: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.63);
+}
+.derction a h3{
+  transition: color 0.3s ease;
+}
+.derction a:hover h3 {
+  color: rgba(0, 0, 0, 0.852);
+}
+
+
+
+
+
+
+
+
+.imge{
+    display: flex;
+    justify-content: space-between;
+}
+.pictre {
+    height: 500px;
+    width: 700px;
+    background-color:white ;
+    border: 1px solid rgb(232, 230, 230);
+    box-shadow: 0  5px 15px rgba(0,0,0,0.06); 
+    position: relative;
+    top: 130px;
+    margin-left: 90px;
+}
+.pictre img{
+    width: 65%;
+    position: relative;
+    left: 200px;
+    top: 20px;
+}
+.pictre .zoom a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 13px;
+    position: relative;
+    color: rgba(0, 0, 0, 0.707);
+    left: 50px;
+    top: 5px;
+}
+.pictre .zoom a i{
+    margin-right: 8px;
+}
+.pictre .zoom a h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+    font-weight: 430;
+    color: rgba(0, 0, 0, 0.707);
+}
+.pictre .manyimge{
+    width: 100px;
+    position: relative;
+    bottom: 470px;
+    right: 170px;
+}
+
+.zoom a h3,
+.zoom a i {
+  transition: color 0.3s ease;
+}
+.zoom a:hover h3,
+.zoom a:hover i {
+  color: rgb(0, 0, 0);
+}
+
+.txt {
+    height: 570px;
+    width: 600px;
+    background-color: white;
+    border: 1px solid rgb(232, 230, 230);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: relative;
+    margin-right: 120px;
+    top: 130px;
+}
+
+.txt h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+    font-weight: 600;
+    position: relative;
+    padding: 10px 0 0 20px;
+    color: rgba(0, 0, 0, 0.707);
+}
+
+.txt .scrept {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.txt .scrept .word .w {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+    font-weight: 600;
+    color: rgba(0, 0, 255, 0.797);
+    font-size: 13px;
+    position: relative;
+    left: 20px;
+    top: 20px;
+    margin-right: 10px; /* Add margin-right for spacing */
+}
+
+.txt .scrept  .word .s {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.601);
+    font-size: 14px;
+    position: relative;
+    left: 20px;
+    top: 20px;
+}
+.txt .scrept  .icon a i{
+    position: relative;
+    right: 10px;
+    margin-right: 20px;
+    top: 22px;
+    color: rgba(0, 0, 0, 0.512);
+    font-size: 19px;
+    border-radius: 20px;
+}
+.txt .scrept .icon .fa i {
+    transition: color 1s ease, opacity 2s; /* تأثير الانتقال السلس للحالة العادية */
+}
+.txt .scrept .icon .fa i:hover {
+    color: rgb(70, 70, 210);
+    transition: color 0.1s ease;
+}
+
+.txt .scrept .icon .ins i {
+    transition: color 1s ease, opacity 2s; /* تأثير الانتقال السلس للحالة العادية */
+}
+.txt .scrept .icon .ins i:hover {
+    color: rgb(255, 0, 157);
+    transition: color 0.1s ease;
+}
+
+.txt .scrept .icon .tel i {
+    transition: color 1s ease, opacity 2s; /* تأثير الانتقال السلس للحالة العادية */
+}
+.txt .scrept .icon .tel i:hover {
+    color: rgb(218, 136, 29);
+    transition: color 0.1s ease;
+}
+
+.txt .pay{
+    width: 35%;
+    height: 40px;
+    background-color: #0db7acc0;
+    position: relative;
+    top: 140px;
+    left: 22px;
+}
+.txt .pay a{
+    text-decoration: none;
+}
+
+
+.txt .pay h1{
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.707);
+    position: relative;
+    left: 18%;
+}
+
+.txt .scrept .icon .pin i {
+    transition: color 1s ease, opacity 2s; /* تأثير الانتقال السلس للحالة العادية */
+}
+.txt .scrept .icon .pin i:hover {
+    color: red; /* لون عند التحويم */
+    transition: color 0.3s ease; /* تأثير الانتقال السلس عند التحويم */
+}
+/* الخط اسفل النصوص والايقونات */
+.line{
+    height: 0.5px;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.296);
+    position: relative;
+    top: 45px;
+    left: 25px;
+}
+/* الوان الجنط */
+.colorbag h3 {
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.707);
+    left: 20px;
+    top: 80px;
+}
+.colorbag a {
+    position: relative;
+    top: 95px;
+    left: 20px;
+    margin-right: 10px;
+}
+.colorbag .seimge1 img{
+    width: 50px;
+}
+.colorbag .seimge2 img{
+    width: 50px;
+}
+
+.colorbag img {
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+.colorbag img.clicked {
+    border-color: #088178;  
+}
+/* السعر */
+.price{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    top: 100px;
+}
+.price .pricetxt{
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+    font-weight: 600;
+    padding: 10px 0 0 20px;
+    color: rgba(0, 0, 0, 0.707);
+}
+.price .pricenum h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+    font-weight: 600;
+    color: #088178;
+    
+}
+/* الوصف */
+.description{
+    position: relative;
+    top: 120px;
+}
+.description h1{
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+    font-weight: 600;
+    padding: 10px 0 0 20px;
+    color: rgba(0, 0, 0, 0.707);
+}
+.description .li{
+    position: relative;
+    left: 15px;
+    top: 5px;
+}
+.description .li ul{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 0 0 20px;
+    color: rgba(0, 0, 0, 0.414);
+}
+.description .li ul li{
+    margin-bottom: 9px;
+}
+
+.green-border {
+    border: 2px solid #088178;
+}
+
+.colorbag .seimge1 img{
+    width: 60px;
+}
+.colorbag .seimge2 img{
+    width: 60px;
+}
+.manyimge .bag7 img{
+    width: 10px;
+    display: none;
+    
+}
